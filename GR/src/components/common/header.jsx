@@ -6,10 +6,11 @@ import Alarm from "../../images/Header/Rectangle.svg";
 export default function Header() {
   return (
     <header
+      className="test"
       style={{
         display: "flex",
         alignItems: "center",
-        backgroundColor: "#161B22",
+        // backgroundColor: "#161B22",
         justifyContent: "space-between",
         padding: "11px 24px 11px 24px",
       }}
@@ -30,7 +31,26 @@ export default function Header() {
           OpenSource Suppoter
         </p>
       </div>
-      <img src={userIcon} />
+      <div
+        style={{
+          position: "relative",
+        }}
+      >
+        <img src={userIcon} width={20} />
+        <div
+          style={{
+            backgroundColor: "#006EED",
+            width: "10px",
+            height: "10px",
+            border: "2px solid #161B22",
+            borderRadius: "50%",
+            position: "absolute",
+            top: 0,
+            right: 0,
+            transform: "translateX(5px) translateY(-5px)",
+          }}
+        ></div>
+      </div>
     </header>
   );
 }
