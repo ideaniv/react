@@ -1,9 +1,9 @@
 body {
-    background-color: #0D1117;
+    background-color: #0d1117;
 }
 
 .container {
-	display: flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     /* justify-content: space-evenly; */
@@ -12,7 +12,10 @@ body {
 
 .sub-container {
     display: flex;
+    /* flex-basis: calc(100% / 3); */
+    /* flex : 1; */
     flex-direction: column;
     /* align-items: center; */
     /* text-align: center; */
+    justify-content: space-evenly;
 }
