@@ -1,0 +1,98 @@
+.main-container {
+    flex: 1;
+    background-color: #0d1117
+}
+
+.summary-container {
+    padding: 49px 10px 50px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-text {
+    font-size: 23px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.charge-btn {
+    padding: 6px 10px;
+    background: #C33D3D;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #363B42;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.point-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.history-container {
+    color: white;
+}
+
+.history-header {
+    padding: 0 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    padding: 6px 18px;
+    border-radius: 6px;
+    background: #21262D;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #363B42;
+    cursor: pointer;
+}
+.spent {
+    margin-right: 5px;
+    background: #58A6FF;
+}
+
+.earned {
+    background: #21262D;
+}
+
+.table-header {
+    display: flex;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #A1AAB4;
+    padding: 5px;
+}
+
+.table-body {
+
+}
+
+.table-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.show-more-btn {
+    color: #58A6FF;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 5px;
+}
+

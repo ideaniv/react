@@ -1,0 +1,90 @@
+.point-box-container {
+    padding: 21px 17px 14px 17px;
+    background: #303641;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.point-box-container:last-child {
+    margin-right: 0;
+}
+
+.header {
+    display: flex;
+    margin-bottom: 30px;
+    padding-right: 50px;
+    /*white-space: nowrap;*/
+}
+
+.header img {
+    margin-right: 9px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.spent {
+    color: #58A6FF;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.earned {
+    color: #6CD064;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.content {
+    font-size: 11px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.point {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.last {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.rate-box {
+    border-radius: 17px;
+    padding: 3px 12px 3px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.zero {
+    background: #A1A6AB;
+    color: #fff;
+}
+
+.plus {
+    background: #FFE5D7;
+    color: #FF0000;
+}
+
+.minus {
+    background: #C8E2FF;
+    color: #0000FF;
+}
