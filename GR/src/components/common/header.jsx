@@ -46,11 +46,7 @@ export default function Header() {
             position: "absolute",
             top: 0,
             right: 0,
-<<<<<<< HEAD
             transform: "translateX(7px) translateY(-4px)",
-=======
-            transform: "translateX(5px) translateY(-5px)",
->>>>>>> main
           }}
         ></div>
       </div>
