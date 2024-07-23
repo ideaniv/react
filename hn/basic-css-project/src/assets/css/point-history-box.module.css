@@ -1,0 +1,54 @@
+.point-history-box-container {
+    display: flex;
+    padding: 20px 0;
+    border-top: 1px solid #21262D;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #C9D1D9;
+    font-size: 15px;
+    font-weight: 600;
+    width: 80%;
+    text-align: center;
+}
+
+.points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #C33D3D;;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #C9D1D9;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6DB1FF;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.progress {
+    color: #6DB1FF;
+}
+
+.complete {
+    color: #47A54B;
+}

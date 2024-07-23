@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./PointPageSpent.module.css";
+<<<<<<< HEAD
 import userIcon from "../images/Left/Profile/Frame.svg";
 import Coin from "../images/Left/Profile/image_16.svg";
 import Tier from "../images/Left/supportTier/Group_8.svg";
@@ -13,6 +14,12 @@ import Git from "../images/Middle/github-mark_1.svg";
 import PayPal from "../images/Middle/174861_1.svg";
 import Ad from "../images/Middle/Vector.svg";
 import Hand from "../images/Middle/Vector2.svg";
+=======
+import userIcon from "../images/common/Frame.svg";
+import Coin from "../images/PointPageSpent/Profile/image_16.svg";
+import Tier from "../images/PointPageSpent/supportTier/Group_8.svg";
+import Grass from "../images/PointPageSpent/Contributions/Group_9.svg";
+>>>>>>> main
 
 export default function PointPageSpent() {
   return (
@@ -20,10 +27,15 @@ export default function PointPageSpent() {
       <div
         class={styles["sub-container"]}
         style={{
+<<<<<<< HEAD
           // borderRight: "1px solid #21262D",
           padding: "0 17px 0 17px",
           display: "flex",
           flexBasis: "350px",
+=======
+          borderRight: "1px solid #21262D",
+          padding: "0 17px 0 17px",
+>>>>>>> main
         }}
       >
         <div class="section">
@@ -106,6 +118,7 @@ export default function PointPageSpent() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <div
         class={styles["sub-container"]}
         style={{
@@ -763,6 +776,26 @@ export default function PointPageSpent() {
           Opensource Licenses
         </h4>
         <h4 style={{ color: "#FF000087", marginTop: "90px" }}>Log out</h4>
+=======
+      <div class={styles["sub-container"]}>
+        <div class="section">
+          <h3 style={{ color: "white", margin: "47px 10px" }}>Summary</h3>
+          <div class="sub-section"></div>
+        </div>
+        <div class="section">
+          <h3 style={{ color: "white", margin: "47px 10px" }}>History</h3>
+          <div class="sub-section"></div>
+        </div>
+      </div>
+      <div class={styles["sub-container"]}>
+        <h4 style={{ color: "#FFFFFFB8" }}>Your profile</h4>
+        <h4 style={{ color: "#FFFFFFB8" }}>Your Repositories</h4>
+        <h4 style={{ color: "#FFFFFFB8" }}>Your Links</h4>
+        <h4 style={{ color: "#FFFFFFB8" }}>Your Points</h4>
+        <h4 style={{ color: "#FFFFFFB8" }}>Your Ranks</h4>
+        <h4 style={{ color: "#FFFFFFB8" }}>Opensource Licenses</h4>
+        <h4 style={{ color: "#FF000087" }}>Log out</h4>
+>>>>>>> main
       </div>
     </div>
   );

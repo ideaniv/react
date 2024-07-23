@@ -9,7 +9,7 @@ export default function Header() {
       style={{
         display: "flex",
         alignItems: "center",
-        backgroundColor: "#161B22",
+        // backgroundColor: "#161B22",
         justifyContent: "space-between",
         padding: "11px 24px 11px 24px",
       }}
@@ -46,7 +46,11 @@ export default function Header() {
             position: "absolute",
             top: 0,
             right: 0,
+<<<<<<< HEAD
             transform: "translateX(7px) translateY(-4px)",
+=======
+            transform: "translateX(5px) translateY(-5px)",
+>>>>>>> main
           }}
         ></div>
       </div>
