@@ -3,26 +3,7 @@
 @tailwind utilities;
 
 * {
-<<<<<<< HEAD
   margin: 0;
   padding: 0;
   font-family: "roboto", sans-serif;
-=======
-    margin: 0;
-    padding: 0;
-    font-family: 'roboto', sans-serif;
-    box-sizing: border-box;
-}
-
-html {
-    /*//height: 100vh;*/
-}
-
-body {
-    height: 100vh;
-}
-
-#root {
-    height: 100vh;
->>>>>>> 43d6d997bf393fb8ad2645633c595d0038639997
 }
