@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../../images/Header/image_19_1.svg";
-import userIcon from "../../images/common/Frame.svg";
-import Alarm from "../../images/Header/Rectangle.svg";
+import userIcon from "../../images/Header/Frame.svg";
 
 export default function Header() {
   return (
@@ -47,7 +46,11 @@ export default function Header() {
             position: "absolute",
             top: 0,
             right: 0,
+<<<<<<< HEAD
+            transform: "translateX(7px) translateY(-4px)",
+=======
             transform: "translateX(5px) translateY(-5px)",
+>>>>>>> main
           }}
         ></div>
       </div>
