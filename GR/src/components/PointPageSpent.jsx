@@ -16,8 +16,9 @@ import Hand from "../images/Middle/Vector2.svg";
 
 export default function PointPageSpent() {
   return (
-    <div class={styles["container"]}>
-      <div
+    <main class={styles["container"]}>
+      {/* left section */}
+      <section
         class={styles["sub-container"]}
         style={{
           // borderRight: "1px solid #21262D",
@@ -105,8 +106,9 @@ export default function PointPageSpent() {
             <img src={Grass} style={{ width: "320px", height: "123.89px" }} />
           </div>
         </div>
-      </div>
-      <div
+      </section>
+      {/* center section */}
+      <section
         class={styles["sub-container"]}
         style={{
           borderLeft: "1px solid #21262D",
@@ -114,11 +116,18 @@ export default function PointPageSpent() {
           padding: "0 6px 0 10px",
           display: "flex",
           // flexBasis: "1048px",
+          flex: 1, // flex : 1 -> flex 부모요소의 남은 공간을 최대한 차지
         }}
       >
-        <div class="section">
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <h3 style={{ color: "white", margin: "47px 10px" }}>Summary</h3>
+        <article class="section">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              margin: "47px 10px",
+            }}
+          >
+            <h3 style={{ color: "white" }}>Summary</h3>
             <button
               style={{
                 backgroundColor: "#c94c4c",
@@ -128,14 +137,23 @@ export default function PointPageSpent() {
                 border: "none",
                 borderRadius: "5px",
                 cursor: "pointer",
-                marginBottom: "20px",
+                // marginBottom: "20px",
               }}
             >
               <p>PayPal Charge</p>
             </button>
           </div>
-          <div class="sub-section">
-            <table>
+          <div
+            class="sub-section"
+            style={{
+              display: "flex",
+            }}
+          >
+            <table
+              style={{
+                flex: 1,
+              }}
+            >
               <tbody>
                 <tr>
                   <td
@@ -290,17 +308,24 @@ export default function PointPageSpent() {
               </tbody>
             </table>
           </div>
-        </div>
-        <div class="section">
+        </article>
+        <article
+          class="section"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           <div
             style={{
               display: "flex",
               justifyContent: "space-between",
-              marginTop: "53px",
+              // marginTop: "53px",
+              margin: "47px 10px",
             }}
           >
-            <h3 style={{ color: "white", margin: "47px 10px" }}>History</h3>
-            <div style={{ marginTop: "53px" }}>
+            <h3 style={{ color: "white" }}>History</h3>
+            <div>
               <button
                 style={{
                   backgroundColor: "#58A6FF",
@@ -343,7 +368,7 @@ export default function PointPageSpent() {
             </thead>
             <tbody
               style={{
-                width: "1048px",
+                // width: "1048px",
                 height: "552px",
               }}
             >
@@ -713,9 +738,10 @@ export default function PointPageSpent() {
             Show more results
           </p>
           <div class="sub-section"></div>
-        </div>
-      </div>
-      <div
+        </article>
+      </section>
+      {/* right section */}
+      <section
         class={styles["sub-container"]}
         style={{
           cursor: "pointer",
@@ -763,7 +789,7 @@ export default function PointPageSpent() {
           Opensource Licenses
         </h4>
         <h4 style={{ color: "#FF000087", marginTop: "90px" }}>Log out</h4>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

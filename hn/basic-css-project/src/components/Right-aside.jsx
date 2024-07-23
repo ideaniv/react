@@ -8,14 +8,14 @@ import starIcon from "../assets/img/star.svg"
 
 export default function RightAside() {
     return (
-            <div className={styles['right-aside-container']}>
-                <div className={styles['menu-item']}><img src={homeIcon} alt="" />Your profile</div>
-                <div className={styles['menu-item']}><img src={bookIcon} alt="" />Your Repositories</div>
-                <div className={styles['menu-item']}><img src={globeIcon} alt="" />Your Links</div>
-                <div className={styles['menu-item']}><img src={packageIcon} alt="" />Your Points</div>
-                <div className={styles['menu-item']}><img src={starIcon} alt="" />Your Ranks</div>
-                <div className={`${styles['menu-item']} ${styles['licenses-box']}`}><div className={styles.licenses}>Opensource Licenses</div></div>
-                <div className={`${styles['menu-item']} ${styles.red}`}>Log out</div>
-            </div>
+            <section className={styles['right-aside-container']}>
+                <nav className={styles['menu-item']}><img src={homeIcon} alt="" />Your profile</nav>
+                <nav className={styles['menu-item']}><img src={bookIcon} alt="" />Your Repositories</nav>
+                <nav className={styles['menu-item']}><img src={globeIcon} alt="" />Your Links</nav>
+                <nav className={styles['menu-item']}><img src={packageIcon} alt="" />Your Points</nav>
+                <nav className={styles['menu-item']}><img src={starIcon} alt="" />Your Ranks</nav>
+                <nav className={`${styles['menu-item']} ${styles['licenses-box']} ${styles.licenses}`}>Opensource Licenses</nav>
+                <nav className={`${styles['menu-item']} ${styles.red}`}>Log out</nav>
+            </section>
     )
 }
