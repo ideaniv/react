@@ -1,0 +1,42 @@
+.right-aside-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: fit-content;
+    height: 100%;
+    background: #0d1117;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 80px 46px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 35px 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 20px;
+    font-weight: 600;
+    /*white-space: nowrap;*/
+}
+
+.menu-item img {
+    margin-right: 4px;
+}
+
+.licenses-box {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.licenses {
+    padding: 35px 40px 35px 0;
+    border-top: 1px solid #21262D;
+    border-bottom: 1px solid #21262D;
+}
+
+.red {
+    color: rgba(255, 0, 0, 0.53);
+}
+
+
+
