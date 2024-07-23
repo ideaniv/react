@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../src/image_19_1.png";
-import userIcon from "../src/Frame.png";
+import logo from "../../assets/images/image_19_1.png";
+import userIcon from "../../assets/images/Frame.png";
 
 export default function Header() {
   return (

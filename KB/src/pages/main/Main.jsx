@@ -1,6 +1,5 @@
-import "./App.css";
-import Header from "./header";
 import { useState, useEffect } from "react";
+import Header from "../../components/header/Header";
 
 function App() {
   var [count, setCount] = useState(13);
@@ -15,6 +14,7 @@ function App() {
         console.log(json);
         setPostData(json);
       });
+
     // (async () => {
     //   try {
     //     const response = await fetch(
