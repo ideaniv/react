@@ -7,7 +7,7 @@ export default function Main() {
   // useEffect는 무조건 한번 실행
   useEffect(() => {
     // console.log("한번만실행");
-    fetch("http://192.168.219.128:8080/api/history", {
+    fetch(`${process.env.REACT_APP_API_URL}/api/history`, {
       method: "GET",
     })
       .then((response) => {
@@ -31,7 +31,7 @@ export default function Main() {
               backgroundColor: "gray",
             }}
           >
-            <img src={`http://192.168.219.128:8080${v.logo}`} />
+            <img src={`${process.env.REACT_APP_API_URL}${v.logo}`} />
             <p>{v.title}</p>
           </div>
         ))}
