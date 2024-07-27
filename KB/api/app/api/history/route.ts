@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
         logo: "/174861_1.png",
         point: 24034,
         updated: "last month",
-        percent: 0.0,
+        percent: "0.0",
       },
       {
         id: 3,
