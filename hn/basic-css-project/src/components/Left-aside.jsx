@@ -7,7 +7,7 @@ import coinImg from "../assets/img/coin_img.png";
 export default function LeftAside() {
   return (
     <>
-      <section className={styles["left-aside-container"]}>
+      <div className={styles["left-aside-container"]}>
         <div className={styles["profile-container"]}>
           <div className={styles["title-text"]}>Profile</div>
           <div className={styles["profile-box"]}>
@@ -38,7 +38,7 @@ export default function LeftAside() {
             <img src={contributionCalendar} alt="contribution calendar img" />
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

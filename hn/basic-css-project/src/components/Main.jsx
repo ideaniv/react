@@ -83,8 +83,8 @@ export default function Main() {
     ]
 
     return (
-        <section className={styles['main-container']}>
-            <article className={styles['summary-container']}>
+        <div className={styles['main-container']}>
+            <div className={styles['summary-container']}>
                 <div className={styles['header-container']}>
                     <div className={styles['header-text']}>Summary</div>
                     <div>
@@ -93,8 +93,8 @@ export default function Main() {
                 </div>
                 <div className={styles['point-box']}>{pointBoxObj.map((obj, index) => (<PointBox key={index} img={obj.img} title={obj.title} content={obj.content} point={obj.point} profitRate={obj.profitRate} />))}
                 </div>
-            </article>
-            <article className={styles['history-container']}>
+            </div>
+            <div className={styles['history-container']}>
                 <div className={styles['history-header']}>
                     <div className={styles['header-text']}>History</div>
                     <div className={styles['btn-container']}>
@@ -109,14 +109,14 @@ export default function Main() {
                         <div style={{flex: 2}}>USERNAME / REPOSITORY</div>
                         <div style={{flex: 1}}>STATUS</div>
                     </div>
-                    <ul className={styles['table-body']}>
+                    <div className={styles['table-body']}>
                         {pointHistoryObj.map((obj, index) => (<PointHistoryBox key={index} date={obj.DATE} points={obj.POINTS} username={obj.USERNAME} repository={obj.REPOSITORY} status={obj.STATUS} background={index % 2 === 0? '#161B22' : '#0E1116'}/> ))}
-                    </ul>
+                    </div>
                     <div className={styles['table-footer']}>
-                        <p className={styles['show-more-btn']}>Show more results</p>
+                        <div className={styles['show-more-btn']}>Show more results</div>
                     </div>
                 </div>
-            </article>
-        </section>
+            </div>
+        </div>
     )
 }
