@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import githubImg from '../assets/img/github.svg'
-import paypalImg from '../assets/img/paypal.svg'
-import adImg from '../assets/img/ad.svg'
-import earnImg from '../assets/img/earn.svg'
-import PointBox from '../components/Points-box'
-import PointHistoryBox from '../components/Point-history-box'
+import githubImg from '../../../../assets/img/github.svg'
+import paypalImg from '../../../../assets/img/paypal.svg'
+import adImg from '../../../../assets/img/ad.svg'
+import earnImg from '../../../../assets/img/earn.svg'
+import PointBox from '../Points-box/Points-box'
+import PointHistoryBox from '../Point-history-box/Point-history-box'
 
 export default function Main() {
     const [summaryList, setSummaryList] = useState([]);
@@ -128,11 +128,11 @@ export default function Main() {
                     </div>
                 </div>
                 <div className='history-table'>
-                    <div className='table-header flex text-[#A1AAB4] text-xs font-semibold text-center p-1'>
-                        <div className="flex-1">DATE</div>
-                        <div className="flex-1">POINTS</div>
-                        <div className="flex-1">USERNAME / REPOSITORY</div>
-                        <div className="flex-1">STATUS</div>
+                    <div className='table-header flex text-[#A1AAB4] text-xs font-semibold text-center py-1'>
+                        <div className="basis-[calc(100%/6*1)]">DATE</div>
+                        <div className="basis-[calc(100%/6*2)]">POINTS</div>
+                        <div className="basis-[calc(100%/6*2)]">USERNAME / REPOSITORY</div>
+                        <div className="basis-[calc(100%/6*1)]">STATUS</div>
                     </div>
                     {/*<ul className={styles['table-body']}>*/}
                     {/*    {pointHistoryObj.map((obj, index) => (<PointHistoryBox key={index} date={obj.date} points={obj.points} username={obj.username} repository={obj.repository} status={obj.status} background={index % 2 === 0? '#161B22' : '#0E1116'}/> ))}*/}

@@ -12,11 +12,11 @@ export default function Header() {
       </left>
       <right className="cursor-pointer">
         <img
-          className="size-[20px] w-[30px] h-[37px] mr-[38px]"
+          className="size-[1.3rem] w-[30px] h-[37px] mr-[38px]"
           src={userIcon}
           alt="User Icon"
         />
-        <a className="bg-[#006EED] size-[15px] border-[2px] border-[#161B22] rounded-[50%] absolute top-3 right-8" />
+        <a className="bg-[#006EED] size-[1rem] border-[2px] border-[#161B22] rounded-[50%] absolute top-3 right-8" />
       </right>
     </header>
   );

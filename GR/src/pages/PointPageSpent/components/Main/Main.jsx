@@ -154,7 +154,7 @@ export default function Main() {
       <article>
         <div className="flex justify-between text-white ml-[10px] mt-[47px] mr-[6px]">
           <div className="text-[24px]">Summary</div>
-          <button className="text-[14px] rounded-md bg-[#c94c4c] py-[6px] px-[10px] border border-[#363B42]">
+          <button className="text-[0.94rem] rounded-md bg-[#c94c4c] py-[6px] px-[10px] border border-[#363B42]">
             PayPal Charge
           </button>
         </div>
@@ -211,14 +211,14 @@ export default function Main() {
                   key={item.id}
                   style={{
                     backgroundColor: "#303641",
-                    padding: "21px 15px 14px 17px",
+                    padding: "21px 1rem 0.94rem 1.15rem",
                   }}
                 >
                   <img
                     src={`http://192.168.219.132:8080` + item.logo}
                     alt={item.title}
                   />
-                  <p style={{ color: item.titleColor, fontSize: "18px" }}>
+                  <p style={{ color: item.titleColor, fontSize: "1.2rem" }}>
                     {item.title}
                   </p>
                   <p style={{ color: "white", fontSize: "11px" }}>
@@ -227,7 +227,7 @@ export default function Main() {
                   <p style={{ color: "white", fontSize: "20px" }}>
                     {item.point}
                   </p>
-                  <p style={{ color: "#FFFFFF80", fontSize: "14px" }}>
+                  <p style={{ color: "#FFFFFF80", fontSize: "0.94rem" }}>
                     {item.updated}
                   </p>
                   <button
@@ -244,7 +244,7 @@ export default function Main() {
                           : item.percent < 0
                           ? "#0000FF"
                           : "white",
-                      fontSize: "12px",
+                      fontSize: "0.8rem",
                       padding: "3px 10px",
                       border: "none",
                       borderRadius: "10px",
@@ -258,12 +258,12 @@ export default function Main() {
           </tbody>
         </table> */}
       <section3 className="flex justify-between text-white ml-[10px] mr-[6px] mt-[53px]">
-        <div className="text-[23px]">History</div>
-        <buttons className="text-white text-[14px]">
-          <button className="rounded-md bg-[#58A6FF] py-[6px] px-[18px] border border-[#363B42] mr-[5px]">
+        <div className="text-[1.45rem]">History</div>
+        <buttons className="text-white text-[0.94rem]">
+          <button className="rounded-md bg-[#58A6FF] py-[6px] px-[1.2rem] border border-[#363B42] mr-[5px]">
             Spent
           </button>
-          <button className="rounded-md bg-[#21262D] py-[6px] px-[18px] border border-[#363B42]">
+          <button className="rounded-md bg-[#21262D] py-[6px] px-[1.2rem] border border-[#363B42]">
             Earned
           </button>
         </buttons>
@@ -287,7 +287,7 @@ export default function Main() {
               <td
                 style={{
                   padding: "8px",
-                  fontSize: "15px",
+                  fontSize: "1rem",
                   color: "#C9D1D9",
                   textAlign: "center",
                 }}
@@ -297,7 +297,7 @@ export default function Main() {
               <td
                 style={{
                   padding: "8px",
-                  fontSize: "17px",
+                  fontSize: "1.15rem",
                   color: "#C33D3D",
                   textAlign: "center",
                 }}
@@ -307,7 +307,7 @@ export default function Main() {
               <td
                 style={{
                   padding: "8px",
-                  fontSize: "13px",
+                  fontSize: "0.87rem",
                   color: "#C9D1D9",
                   textAlign: "center",
                 }}
@@ -317,7 +317,7 @@ export default function Main() {
               <td
                 style={{
                   padding: "8px",
-                  fontSize: "14px",
+                  fontSize: "0.94rem",
                   color: item.statusColor,
                   textAlign: "center",
                 }}
