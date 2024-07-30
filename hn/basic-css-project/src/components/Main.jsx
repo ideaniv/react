@@ -108,8 +108,8 @@ export default function Main() {
     }, [])
 
     return (
-        <section className={styles['main-container']}>
-            <article className={styles['summary-container']}>
+        <div className={styles['main-container']}>
+            <div className={styles['summary-container']}>
                 <div className={styles['header-container']}>
                     <div className={styles['header-text']}>Summary</div>
                     <div>
@@ -119,8 +119,8 @@ export default function Main() {
                 {/*<div className={styles['point-box']}>{pointBoxObj.map((obj, index) => (<PointBox key={index} img={obj.img} title={obj.title} content={obj.content} point={obj.point} profitRate={obj.profitRate} />))}*/}
                 <div className={styles['point-box']}>{summaryList.map((value, index) => (<PointBox key={value.id} img={isFetch ? `${process.env.REACT_APP_FETCH_URL}${value.logo}` : `${value.logo}`} title={value.title} content={value.summary} point={value.point} profitRate={value.percent} />))}
                 </div>
-            </article>
-            <article className={styles['history-container']}>
+            </div>
+            <div className={styles['history-container']}>
                 <div className={styles['history-header']}>
                     <div className={styles['header-text']}>History</div>
                     <div className={styles['btn-container']}>
@@ -144,11 +144,12 @@ export default function Main() {
                                              repository={value.repository} status={value.status}
                                              background={index % 2 === 0 ? '#161B22' : '#0E1116'} />))}
                     </ul>
+
                     <div className={styles['table-footer']}>
-                        <p className={styles['show-more-btn']}>Show more results</p>
+                        <div className={styles['show-more-btn']}>Show more results</div>
                     </div>
                 </div>
-            </article>
-        </section>
+            </div>
+        </div>
     )
 }

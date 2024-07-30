@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font: 8px;
+}
+
+@layer {
+  .base_font {
+    @apply font-bold text-xl text-[#b5b5b5];
+    text-decoration: underline;
+  }
+}

@@ -5,8 +5,9 @@ module.exports = {
     extend: {
       colors: {
         mybrowny: "#500724",
-      },
+      }
     },
   },
   plugins: [],
-};
+}
+

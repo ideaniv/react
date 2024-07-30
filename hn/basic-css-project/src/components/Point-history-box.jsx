@@ -7,6 +7,6 @@ export default function PointHistoryBox({ date, points, username, repository, st
             <div style={{ flex: 2 }} className={styles['points']}> {points}P</div>
             <div style={{ flex: 2 }} className={styles['content']}>{username} / {repository}</div>
             <div style={{ flex: 1 }} className={`${styles['status']} ${status === 'IN PROGRESS' ? styles.progress : styles.complete}`}>{status}</div>
-        </li>
+        </div>
     )
 }

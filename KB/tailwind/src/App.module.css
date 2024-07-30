@@ -1,6 +1,0 @@
-@layer {
-  .base_font {
-    @apply font-bold text-xl text-[green];
-    text-decoration: underline;
-  }
-}
