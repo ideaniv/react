@@ -7,8 +7,9 @@ import grass from "../../assets/images/leftSide/contributions.svg";
 
 export default function LeftSide() {
   return (
-    <container className="flex flex-col mr-[16px] ml-[17px]">
-      <section1 className="mt-[22px]">
+    <section className="flex flex-col mr-[16px] ml-[17px]">
+      {/* Profile 시작 */}
+      <article className="mt-[22px]">
         <div className="text-white text-[18px]">Profile</div>
         <img
           className="size-[169px] mt-[15px] ml-[70px]"
@@ -21,8 +22,10 @@ export default function LeftSide() {
           <img className="" src={coin} alt="Coin" />
         </div>
         <div className="text-[#8B949E] mb-[18px]">ambition-kwon</div>
-      </section1>
-      <section2 className="">
+      </article>
+      {/* Profile 끝 */}
+      {/* Support Tier 시작 */}
+      <article className="">
         <div className="text-white text-[18px] border-t border-[#21262D] pt-[36px] pb-[24px]">
           Support Tier
         </div>
@@ -31,13 +34,16 @@ export default function LeftSide() {
           src={tier}
           alt="Tier"
         />
-      </section2>
-      <section3 className="mt-[24px]">
+      </article>
+      {/* Support Tier 끝 */}
+      {/* Contributions 시작 */}
+      <article className="mt-[24px]">
         <div className="text-white text-[18px] mb-[15px] ml-[3px]">
           Contributions
         </div>
         <img className="ml-[-3px]" src={grass} alt="Grass" />
-      </section3>
-    </container>
+      </article>
+      {/* Contributions 끝 */}
+    </section>
   );
 }

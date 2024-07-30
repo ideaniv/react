@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styles from "./main.module.css";
-import git from "../../assets/images/summary/gitLogo.svg";
-import payPal from "../../assets/images/summary/payPalLogo.svg";
-import ad from "../../assets/images/summary/AdLogo.svg";
-import hand from "../../assets/images/summary/hand.svg";
+import git from "../../../../assets/images/summary/gitLogo.svg";
+import payPal from "../../../../assets/images/summary/payPalLogo.svg";
+import ad from "../../../../assets/images/summary/AdLogo.svg";
+import hand from "../../../../assets/images/summary/hand.svg";
 
 export default function Main() {
   const [summary, setSummaryData] = useState([]);
@@ -14,6 +14,9 @@ export default function Main() {
       .then((data) => {
         console.log(data);
         setSummaryData(data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, []);
 
@@ -25,6 +28,9 @@ export default function Main() {
       .then((data) => {
         console.log(data);
         setHistoryData(data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, []);
 
@@ -143,55 +149,60 @@ export default function Main() {
   //   ];
 
   return (
-    <container className="">
-      <section1 className="flex justify-between text-white ml-[10px] mt-[47px] mr-[6px]">
-        <div className="text-[24px]">Summary</div>
-        <button className="text-[14px] rounded-md bg-[#c94c4c] py-[6px] px-[10px] border border-[#363B42]">
-          PayPal Charge
-        </button>
-      </section1>
-      <boxes className="flex justify-between mt-[26px]">
-        <box className="border-0 ml-[10px] w-[252px] h-[155px] bg-[#303641]">
-          <img className="size-[39px] ml-[4px]" src={git} alt="git" />
-          <div className="text-white">Spent Points</div>
-          <div className="text-[#58A6FF]">Supporting by Repository</div>
-          <div className="text-white">11301P</div>
-          <div className="text-[#FFFFFF80]">last month</div>
-          <div className="flex justify-center text-[#FF0000] bg-[#FFE5D7]">
-            ↑ 2.5%
-          </div>
-        </box>
-        <box className="border-0 w-[252px] h-[155px] bg-[#303641]">
-          <img className="size-[39px]" src={payPal} alt="payPal" />
-          <div className="text-white">Earned Points</div>
-          <div className="text-[#58A6FF]">Gained By Paypal</div>
-          <div className="text-white">24034P</div>
-          <div className="text-[#FFFFFF80]">last month</div>
-          <div className="flex justify-center text-white bg-[#A1A6AB] my-[3px] mx-[10px]">
-            ↑ 2.5%
-          </div>
-        </box>
-        <box className="border-0 w-[252px] h-[155px] bg-[#303641]">
-          <img className="size-[39px] mr-[4px]" src={ad} alt="ad" />
-          <div className="text-white">Earned Points</div>
-          <div className="text-[#58A6FF]">Gained By Ads</div>
-          <div className="text-white">102P</div>
-          <div className="text-[#FFFFFF80]">last month</div>
-          <div className="flex justify-center text-[#0000FF] bg-[#C8E2FF]">
-            0%
-          </div>
-        </box>
-        <box className="border-0 mr-[6px] w-[252px] h-[155px] bg-[#303641]">
-          <img className="size-[39px] mr-[4px]" src={hand} alt="hand" />
-          <div className="text-white">Earned Points</div>
-          <div className="text-[#58A6FF]">Gained By Sponsor</div>
-          <div className="text-white">1203P</div>
-          <div className="text-[#FFFFFF80]">last month</div>
-          <div className="flex justify-center text-[#FF0000] bg-[#FFE5D7]">
-            ↑ 2.5%
-          </div>
-        </box>
-      </boxes>
+    <>
+      {/* Summary 시작 */}
+      <article>
+        <div className="flex justify-between text-white ml-[10px] mt-[47px] mr-[6px]">
+          <div className="text-[24px]">Summary</div>
+          <button className="text-[14px] rounded-md bg-[#c94c4c] py-[6px] px-[10px] border border-[#363B42]">
+            PayPal Charge
+          </button>
+        </div>
+        <ul className="flex justify-between mt-[26px]">
+          <li className="border-0 ml-[10px] w-[252px] h-[155px] bg-[#303641]">
+            <img className="size-[39px] ml-[4px]" src={git} alt="git" />
+            <div className="text-white">Spent Points</div>
+            <div className="text-[#58A6FF]">Supporting by Repository</div>
+            <div className="text-white">11301P</div>
+            <div className="text-[#FFFFFF80]">last month</div>
+            <div className="flex justify-center text-[#FF0000] bg-[#FFE5D7]">
+              ↑ 2.5%
+            </div>
+          </li>
+          <li className="border-0 w-[252px] h-[155px] bg-[#303641]">
+            <img className="size-[39px]" src={payPal} alt="payPal" />
+            <div className="text-white">Earned Points</div>
+            <div className="text-[#58A6FF]">Gained By Paypal</div>
+            <div className="text-white">24034P</div>
+            <div className="text-[#FFFFFF80]">last month</div>
+            <div className="flex justify-center text-white bg-[#A1A6AB] my-[3px] mx-[10px]">
+              ↑ 2.5%
+            </div>
+          </li>
+          <li className="border-0 w-[252px] h-[155px] bg-[#303641]">
+            <img className="size-[39px] mr-[4px]" src={ad} alt="ad" />
+            <div className="text-white">Earned Points</div>
+            <div className="text-[#58A6FF]">Gained By Ads</div>
+            <div className="text-white">102P</div>
+            <div className="text-[#FFFFFF80]">last month</div>
+            <div className="flex justify-center text-[#0000FF] bg-[#C8E2FF]">
+              0%
+            </div>
+          </li>
+          <li className="border-0 mr-[6px] w-[252px] h-[155px] bg-[#303641]">
+            <img className="size-[39px] mr-[4px]" src={hand} alt="hand" />
+            <div className="text-white">Earned Points</div>
+            <div className="text-[#58A6FF]">Gained By Sponsor</div>
+            <div className="text-white">1203P</div>
+            <div className="text-[#FFFFFF80]">last month</div>
+            <div className="flex justify-center text-[#FF0000] bg-[#FFE5D7]">
+              ↑ 2.5%
+            </div>
+          </li>
+        </ul>
+      </article>
+      {/* Summary 끝 */}
+
       {/* <table>
           <tbody>
             <tr>
@@ -320,6 +331,6 @@ export default function Main() {
       <a className="text-[#58A6FF] flex justify-center items-center cursor-pointer">
         Show more results
       </a>
-    </container>
+    </>
   );
 }
