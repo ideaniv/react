@@ -1,41 +1,79 @@
-import React, { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import Header from "../../components/header/Header";
 
-export default function Main() {
-  var [historyList, setHistoryList] = useState([]);
+function App() {
+  var [count, setCount] = useState(13);
+  var [word, setWord] = useState("기본값");
+  const [postData, setPostData] = useState([]);
+  const [randomData, setRandomData] = useState(null);
 
-  // useEffect ==> 첫번째 파라미터 : 화살표함수()=>{} , 두번째 파라미터 : [] <- 내부에 감지할 useState의 getter변수 대입
-  // useEffect는 무조건 한번 실행
   useEffect(() => {
-    // console.log("한번만실행");
-    fetch(`${process.env.REACT_APP_API_URL}/api/history`, {
-      method: "GET",
-    })
-      .then((response) => {
-        console.log(response);
-        // .json()함수는 response의 body를 가져오는 유틸내장함수
-        return response.json();
-      })
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => response.json())
       .then((json) => {
         console.log(json);
-        setHistoryList(json);
+        setPostData(json);
       });
+
+    // (async () => {
+    //   try {
+    //     const response = await fetch(
+    //       "https://jsonplaceholder.typicode.com/posts"
+    //     );
+    //     const json = await response.json();
+    //     console.log(json);
+    //     setPostData(json);
+    //   } catch (err) {
+    //     console.error(err);
+    //   }
+    // })();
   }, []);
 
+  useEffect(() => {
+    fetch(`https://jsonplaceholder.typicode.com/todos/${count}`)
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        setRandomData(json);
+      });
+  }, [count]);
+
   return (
-    <div>
-      <ul>
-        {historyList.map((v, i) => (
-          <div
-            key={v.id}
-            style={{
-              backgroundColor: "gray",
-            }}
-          >
-            <img src={`${process.env.REACT_APP_API_URL}${v.logo}`} />
-            <p>{v.title}</p>
-          </div>
-        ))}
-      </ul>
-    </div>
+    <>
+      <Header />
+      <section>
+        <h1>fetch</h1>
+        <p>page : {count}</p>
+        <button onClick={() => setCount(count + 1)}>plus</button>
+        <button onClick={() => setCount(count - 1)}>minus</button>
+        <p>카운트가 변할때마다 실행됨 : {randomData?.title ?? "없음"}</p>
+        <hr />
+        <input
+          type="text"
+          value={word}
+          onChange={(e) => {
+            // console.log(e.target);
+            // console.log(e.target.value);
+            setWord(e.target.value);
+          }}
+        />
+        <hr />
+        <p>postData : {postData.length}</p>
+        {postData.length === 0 ? (
+          <p>Loading...</p>
+        ) : (
+          postData.map((value, index) => {
+            return (
+              <div>
+                <p>title : {value.title}</p>
+                <p>body : {value.body}</p>
+              </div>
+            );
+          })
+        )}
+      </section>
+    </>
   );
 }
+
+export default App;
