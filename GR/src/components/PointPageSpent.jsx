@@ -1,8 +1,7 @@
-import "./pointPageSpent.module.css";
+import styles from "./pointPageSpent.module.css";
 import Header from "./pointPageSpent/Header";
 import LeftSide from "./pointPageSpent/LeftSide";
-import Summary from "./pointPageSpent/Summary";
-import History from "./pointPageSpent/History";
+import Main from "./pointPageSpent/Main";
 import RightSide from "./pointPageSpent/RightSide";
 
 function PointPageSpent() {
@@ -11,9 +10,8 @@ function PointPageSpent() {
       <Header />
       <div className="flex">
         <LeftSide />
-        <div className="flex-1">
-          <Summary />
-          <History />
+        <div className="flex-1 border-x border-[#21262D] py-0 pr-[6px] pl-[10px]">
+          <Main />
         </div>
         <RightSide />
       </div>
