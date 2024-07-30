@@ -1,62 +1,38 @@
 import React from "react";
 import styles from "./rightSide.module.css";
-import Home from "../../assets/images/rightSide/home.svg";
-import Book from "../../assets/images/rightSide/book.svg";
-import Globe from "../../assets/images/rightSide/globe.svg";
-import Package from "../../assets/images/rightSide/package.svg";
-import Star from "../../assets/images/rightSide/star.svg";
+import home from "../../assets/images/rightSide/home.svg";
+import book from "../../assets/images/rightSide/book.svg";
+import globe from "../../assets/images/rightSide/globe.svg";
+import pack from "../../assets/images/rightSide/pack.svg";
+import star from "../../assets/images/rightSide/star.svg";
 
-export default function rightSide() {
+export default function RightSide() {
   return (
-    <div
-      class={styles["sub-container"]}
-      style={{
-        cursor: "pointer",
-        fontSize: "20px",
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        // flexBasis: "326px",
-        marginLeft: "44px",
-      }}
-    >
-      <h4 style={{ color: "#FFFFFFB8" }}>
-        <img src={Home} style={{}} />
-        Your profile
-      </h4>
-      <h4 style={{ color: "#FFFFFFB8" }}>
-        <img src={Book} style={{ marginTop: "90px" }} />
-        Your Repositories
-      </h4>
-      <h4 style={{ color: "#FFFFFFB8" }}>
-        <img src={Globe} style={{ marginTop: "90px" }} />
-        Your Links
-      </h4>
-      <h4 style={{ color: "#FFFFFFB8" }}>
-        <img src={Package} style={{ marginTop: "90px" }} />
-        Your Points
-      </h4>
-      <h4
-        style={{
-          color: "#FFFFFFB8",
-          borderBottom: "1px solid #21262D",
-          paddingBottom: "45px",
-        }}
-      >
-        <img src={Star} style={{ marginTop: "90px" }} />
-        Your Ranks
-      </h4>
-      <h4
-        style={{
-          color: "#FFFFFFB8",
-          borderBottom: "1px solid #21262D",
-          paddingBottom: "45px",
-        }}
-      >
-        <img src={Home} style={{ marginTop: "45px" }} />
+    <nav className="flex flex-col text-[20px] text-white py-[140px] pl-[46px] pr-[29.72px]">
+      <div className="flex cursor-pointer">
+        <img className="size-[20px] mr-[4px]" src={home} alt="Home" />
+        <a className="mb-[90px]">Your profile</a>
+      </div>
+      <div className="flex cursor-pointer">
+        <img className="size-[20px] mr-[4px]" src={book} alt="Book" />
+        <a className="mb-[90px]">Your Repositories</a>
+      </div>
+      <div className="flex cursor-pointer">
+        <img className="size-[20px] mr-[4px]" src={globe} alt="Home" />
+        <a className="mb-[90px]">Your Links</a>
+      </div>
+      <div className="flex cursor-pointer">
+        <img className="size-[20px] mr-[4px]" src={pack} alt="Home" />
+        <a className="mb-[90px]">Your Points</a>
+      </div>
+      <div className="flex cursor-pointer">
+        <img className="size-[20px] mr-[4px]" src={star} alt="Home" />
+        <a className="mb-[45px]">Your Ranks</a>
+      </div>
+      <a className=" border-y border-[#21262D] py-[45px] cursor-pointer w-[222px]">
         Opensource Licenses
-      </h4>
-      <h4 style={{ color: "#FF000087", marginTop: "90px" }}>Log out</h4>
-    </div>
+      </a>
+      <a className="text-[#FF000087] mt-[45px] cursor-pointer">Log out</a>
+    </nav>
   );
 }
