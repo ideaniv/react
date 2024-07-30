@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*:root {*/
+/*    font-size: 8px;*/
+/*}*/
+
+@layer {
+    .base_font {
+        @apply font-bold text-2xl;
+        /* css */ text-decoration: none;
+    }
+
+    .menu_item {
+        @apply flex items-center py-[35px] text-white/[0.72] text-[20px] font-semibold;
+    }
+}
