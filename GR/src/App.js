@@ -1,10 +1,12 @@
-import './App.css';
-import PointPageSpent from './components/PointPageSpent';
+import "./App.css";
+import PointPageSpent from "./pages/PointPageSpent/PointPageSpent";
 
 function App() {
-  return <>
-  <PointPageSpent />
-  </>
+  return (
+    <>
+      <PointPageSpent />
+    </>
+  );
 }
 
 export default App;
