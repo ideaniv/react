@@ -7,7 +7,7 @@ export default function Header() {
     const navigate = useNavigate();
 
     return (
-        <header className="sticky top-0 flex justify-between items-center bg-[#161B22] px-[24px] py-[11px] z-10">
+        <header className="sticky top-0 flex justify-between items-center bg-[#161B22] px-[24px] py-[11px] z-[1]">
             <div className="flex items-center">
                 <img src={logo} className='hover:cursor-pointer' onClick={()=>navigate('/')}/>
                 <p className="text-white ml-[10px]">
