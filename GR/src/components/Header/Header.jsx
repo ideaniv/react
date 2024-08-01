@@ -5,19 +5,15 @@ import userIcon from "../../assets/images/header/smallUserPic.svg";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center h-[60px] bg-[#161B22]">
-      <left className="flex items-center cursor-pointer">
-        <img className="py-[11px] ml-[24px]" src={logo} alt="Logo" />
-        <a className="text-white ml-[10px] text-[21px]">OpenSource Supporter</a>
-      </left>
-      <right className="cursor-pointer">
-        <img
-          className="size-[1.3rem] w-[30px] h-[37px] mr-[38px]"
-          src={userIcon}
-          alt="User Icon"
-        />
-        <a className="bg-[#006EED] size-[1rem] border-[2px] border-[#161B22] rounded-[50%] absolute top-3 right-8" />
-      </right>
+    <header className="flex justify-between items-center bg-[#161B22] py-[.8rem] px-[1.5rem]">
+      <div className="flex items-center cursor-pointer gap-[.5rem]">
+        <img src={logo} alt="Logo" className="w-[1rem]" />
+        <a className="text-white">OpenSource Supporter</a>
+      </div>
+      <div className="cursor-pointer relative">
+        <img src={userIcon} alt="User Icon" className="w-[2rem]" />
+        <div className="bg-[#006EED] w-[1rem] absolute top-0 right-0 aspect-square border-[2px] border-[#161B22] rounded-[50%]"></div>
+      </div>
     </header>
   );
 }

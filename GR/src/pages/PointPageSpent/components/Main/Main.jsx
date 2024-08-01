@@ -159,7 +159,7 @@ export default function Main() {
           </button>
         </div>
         <ul className="flex justify-between mt-[26px]">
-          <li className="border-0 ml-[10px] w-[252px] h-[155px] bg-[#303641]">
+          <li className="border-0 ml-[10px] h-[155px] bg-[#303641]">
             <img className="size-[39px] ml-[4px]" src={git} alt="git" />
             <div className="text-white">Spent Points</div>
             <div className="text-[#58A6FF]">Supporting by Repository</div>
@@ -169,7 +169,7 @@ export default function Main() {
               ↑ 2.5%
             </div>
           </li>
-          <li className="border-0 w-[252px] h-[155px] bg-[#303641]">
+          <li className="border-0 h-[155px] bg-[#303641]">
             <img className="size-[39px]" src={payPal} alt="payPal" />
             <div className="text-white">Earned Points</div>
             <div className="text-[#58A6FF]">Gained By Paypal</div>
@@ -179,7 +179,7 @@ export default function Main() {
               ↑ 2.5%
             </div>
           </li>
-          <li className="border-0 w-[252px] h-[155px] bg-[#303641]">
+          <li className="border-0 h-[155px] bg-[#303641]">
             <img className="size-[39px] mr-[4px]" src={ad} alt="ad" />
             <div className="text-white">Earned Points</div>
             <div className="text-[#58A6FF]">Gained By Ads</div>
@@ -189,7 +189,7 @@ export default function Main() {
               0%
             </div>
           </li>
-          <li className="border-0 mr-[6px] w-[252px] h-[155px] bg-[#303641]">
+          <li className="border-0 mr-[6px] h-[155px] bg-[#303641]">
             <img className="size-[39px] mr-[4px]" src={hand} alt="hand" />
             <div className="text-white">Earned Points</div>
             <div className="text-[#58A6FF]">Gained By Sponsor</div>
@@ -277,7 +277,7 @@ export default function Main() {
             <th>STATUS</th>
           </tr>
         </thead>
-        <tbody className="w-[1048px] h-[552px]"></tbody>
+        <tbody className="h-[552px]"></tbody>
         {/* <tbody style={{ width: "1048px", height: "552px" }}>
           {historyData.map((item, index) => (
             <tr
