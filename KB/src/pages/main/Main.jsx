@@ -1,33 +1,13 @@
 import { useState, useEffect } from "react";
 import Header from "../../components/header/Header";
+import { useLoaderData } from "react-router-dom";
 
 function App() {
   var [count, setCount] = useState(13);
+  const loaderData = useLoaderData();
   var [word, setWord] = useState("기본값");
-  const [postData, setPostData] = useState([]);
+  const [postData, setPostData] = useState(loaderData);
   const [randomData, setRandomData] = useState(null);
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json);
-        setPostData(json);
-      });
-
-    // (async () => {
-    //   try {
-    //     const response = await fetch(
-    //       "https://jsonplaceholder.typicode.com/posts"
-    //     );
-    //     const json = await response.json();
-    //     console.log(json);
-    //     setPostData(json);
-    //   } catch (err) {
-    //     console.error(err);
-    //   }
-    // })();
-  }, []);
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/todos/${count}`)
@@ -59,18 +39,14 @@ function App() {
         />
         <hr />
         <p>postData : {postData.length}</p>
-        {postData.length === 0 ? (
-          <p>Loading...</p>
-        ) : (
-          postData.map((value, index) => {
-            return (
-              <div>
-                <p>title : {value.title}</p>
-                <p>body : {value.body}</p>
-              </div>
-            );
-          })
-        )}
+        {postData.map((value, index) => {
+          return (
+            <div key={value.id}>
+              <p>title : {value.title}</p>
+              <p>body : {value.body}</p>
+            </div>
+          );
+        })}
       </section>
     </>
   );
