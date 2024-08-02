@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  redirect,
+  RouterProvider,
+} from "react-router-dom";
 import "./index.css";
 import Main from "../src/pages/main/Main";
 import About from "./pages/about/About";
@@ -9,9 +13,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    loader: ({ request }) => {
-      console.log(request);
-      return null;
+    loader: async ({ request }) => {
+      return fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => response.json())
+        .then((json) => {
+          return json;
+        });
     },
   },
   {
@@ -20,6 +27,12 @@ const router = createBrowserRouter([
     loader: ({ request }) => {
       console.log(request);
       return null;
+    },
+  },
+  {
+    path: "*",
+    loader: () => {
+      return redirect("/");
     },
   },
 ]);
