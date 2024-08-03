@@ -8,6 +8,9 @@ import {
 import "./index.css";
 import Main from "../src/pages/main/Main";
 import About from "./pages/about/About";
+import { Provider } from "react-redux";
+import { store } from "./store";
+import Arr from "./pages/arr/Arr";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +33,10 @@ const router = createBrowserRouter([
     },
   },
   {
+    path: "/arr",
+    element: <Arr />,
+  },
+  {
     path: "*",
     loader: () => {
       return redirect("/");
@@ -40,6 +47,8 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );

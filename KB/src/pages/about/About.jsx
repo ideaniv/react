@@ -1,5 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 export default function About() {
-  return <div>어바우트</div>;
+  const countReducer = useSelector((state) => state.countReducer);
+  return <div>{countReducer.count}</div>;
 }
