@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./leftSide.module.css";
+import styles from "./LeftSide.module.css";
 import userIcon from "../../assets/images/leftSide/bigUserPic.svg";
 import coin from "../../assets/images/leftSide/coin.svg";
 import tier from "../../assets/images/leftSide/supportTier.svg";
