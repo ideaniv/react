@@ -8,7 +8,7 @@ function PointPageSpent() {
   return (
     <>
       <Header />
-      <main className="flex">
+      <main className="flex overflow-hidden">
         <LeftSide />
         <section className="border-x border-[#21262D]">
           <Center />

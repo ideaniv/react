@@ -7,23 +7,23 @@ import grass from "../../assets/images/leftSide/contributions.svg";
 
 export default function LeftSide() {
   return (
-    <section className="flex flex-col mr-[1.15rem] ml-[1.15rem]">
+    <section className="flex flex-col">
       {/* Profile 시작 */}
-      <article className="mt-[1.35rem]">
+      <article className=" flex flex-col p-[1rem] gap-[1rem]">
         <div className="text-white text-[1.2rem]">Profile</div>
-        <img
-          className="size-[10rem] mt-[1rem] ml-[4.5rem]"
-          src={userIcon}
-          alt="User Icon"
-        />
-        <div className="text-white text-[1.45rem] mt-[1.5rem]] ml-[30px]">
-          권혁원
+        <img className="w-[50%] self-center" src={userIcon} alt="User Icon" />
+        <div className="flex justify-between items-center mt-[.5rem] sm:flex-col sm:gap-[1rem]">
+          <div>
+            <div className="text-white text-[1rem]">권혁원</div>
+            <div className="text-[#8B949E]">ambition-kwon</div>
+          </div>
+          <div className="flex items-center flex-wrap justify-center sm:justify-start gap-x-[1rem]">
+            <div className="text-white text-[0.8rem] text-center">
+              15.9 / 30.8
+            </div>
+            <img className="w-[1rem]" src={coin} alt="Coin" />
+          </div>
         </div>
-        <div className="flex justify-end">
-          <div className="text-white text-[0.8rem] mr-[5px]">15.9 / 30.8 </div>
-          <img className="" src={coin} alt="Coin" />
-        </div>
-        <div className="text-[#8B949E] mb-[1.2rem]">ambition-kwon</div>
       </article>
       {/* Profile 끝 */}
       {/* Support Tier 시작 */}
