@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import styles from "./main.module.css";
+import styles from "./Center.module.css";
 import git from "../../../../assets/images/summary/gitLogo.svg";
 import payPal from "../../../../assets/images/summary/payPalLogo.svg";
 import ad from "../../../../assets/images/summary/AdLogo.svg";
 import hand from "../../../../assets/images/summary/hand.svg";
 
-export default function Main() {
+export default function Center() {
   const [summary, setSummaryData] = useState([]);
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./leftSide.module.css";
+import styles from "./LeftSide.module.css";
 import userIcon from "../../assets/images/leftSide/bigUserPic.svg";
 import coin from "../../assets/images/leftSide/coin.svg";
 import tier from "../../assets/images/leftSide/supportTier.svg";
@@ -7,16 +7,16 @@ import grass from "../../assets/images/leftSide/contributions.svg";
 
 export default function LeftSide() {
   return (
-    <section className="flex flex-col mr-[16px] ml-[1.15rem]">
+    <section className="flex flex-col mr-[1.15rem] ml-[1.15rem]">
       {/* Profile 시작 */}
-      <article className="mt-[22px]">
+      <article className="mt-[1.35rem]">
         <div className="text-white text-[1.2rem]">Profile</div>
         <img
-          className="size-[169px] mt-[1rem] ml-[70px]"
+          className="size-[10rem] mt-[1rem] ml-[4.5rem]"
           src={userIcon}
           alt="User Icon"
         />
-        <div className="text-white text-[1.45rem] mt-[24px] ml-[30px]">
+        <div className="text-white text-[1.45rem] mt-[1.5rem]] ml-[30px]">
           권혁원
         </div>
         <div className="flex justify-end">
