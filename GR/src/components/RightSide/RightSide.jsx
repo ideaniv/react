@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./RightSide.module.css";
+import styles from "./rightSide.module.css";
 import home from "../../assets/images/rightSide/home.svg";
 import book from "../../assets/images/rightSide/book.svg";
 import globe from "../../assets/images/rightSide/globe.svg";
